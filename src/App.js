@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Navbar from './components/Navbar/Navbar';
+import Proteams from './components/Proteams/Proteams';
+import Services from './components/Services/Services';
+import Slider from './components/Slider/Slider';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <> 
+    <div className='bg-no-repeat bg-custom-size h-full w-full'
+     style={{ backgroundImage: `url(/assets/Slider/Bubble_1.png)` }}>
+      <Navbar />
+      <Slider />
     </div>
+
+    <Services/>
+    <div className='bg-no-repeat bg-right w-full'
+     style={{ backgroundImage: `url(/assets/About/Bubble_2.png)` }}>
+    <About/>
+    </div>
+
+    <Proteams/>
+    <div className='bg-no-repeat w-full'
+     style={{ backgroundImage: `url(/assets/Contact/Bubble_3.png)` }}>
+    <Contact/>
+    </div>
+   </>
   );
 }
 
