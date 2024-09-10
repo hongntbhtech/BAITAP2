@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // mode: 'jit',
-  // test: /\.(png|jpg|jpeg|gif|svg)$/,
+  test: /\.(png|jpg|jpeg|gif|svg)$/,
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
