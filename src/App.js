@@ -1,9 +1,9 @@
 
 import './App.css';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
+// import Contact from './components/Contact/Contact';
 import Navbar from './components/Navbar/Navbar';
-import Proteams from './components/Proteams/Proteams';
+// import Proteams from './components/Proteams/Proteams';
 import Services from './components/Services/Services';
 import Slider from './components/Slider/Slider';
 import './index.css';
@@ -18,16 +18,16 @@ function App() {
     </div>
 
     <Services/>
-    <div className='bg-no-repeat bg-right w-full'
-     style={{ backgroundImage: `url(/assets/About/Bubble_2.png)` }}>
+    {/* <div className='bg-no-repeat bg-right w-full'
+     style={{ backgroundImage: `url(/assets/About/Bubble_2.png)` }}> */}
     <About/>
-    </div>
+    {/* </div> */}
 
-    <Proteams/>
-    <div className='bg-no-repeat w-full'
+    {/* <Proteams/> */}
+    {/* <div className='bg-no-repeat w-full'
      style={{ backgroundImage: `url(/assets/Contact/Bubble_3.png)` }}>
     <Contact/>
-    </div>
+    </div> */}
    </>
   );
 }

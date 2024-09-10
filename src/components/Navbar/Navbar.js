@@ -1,56 +1,58 @@
 import { FaAlignJustify, FaTimes } from 'react-icons/fa';
-import logo from '../../assets/Navbar/mainLogo.png';
+// import logo from '../../assets/Navbar/mainLogo.png';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 function Navbar() {
+
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+    // const handleClick = () => setClick(!click);
+    // const closeMobileMenu = () => setClick(false);
 
-    const navItems = [
-        { to: '/', text: 'Home+' },
-        { to: '/about', text: 'About' },
-        { to: '/service', text: 'Service' },
-        { to: '/gallery', text: 'Gallery' },
-        { to: '/blog', text: 'Blog' },
-        { to: '/contact', text: 'Contact', type: 'button' },
-    ];
+    const handleClick = () => setClick(prevClick => !prevClick);
+
 
     return (
-        <nav className="max-w-screen-2xl w-full font-poppins">
-            <div className="flex justify-between py-10 px-4">
-                {/* Logo */}
-                <div className='pl-[130px]'>
-                    <img src={logo} alt='Logo' />
+        <>
+            <navbar className="font-poppins flex justify-between items-center w-[79.8%] mx-auto pt-[42px] max-xl:w-[83%]">
+
+
+                <div className=''>
+                    {/* <img className='w-16' src={logo} alt='Logo' /> */}
+                    <img className="max-lg:w-[80%] max-md:w-[90%]" src='../../assets/Navbar/mainLogo.png' alt="..."></img>
                 </div>
 
-                {/* Menu Icon */}
-                <div className='md:hidden cursor-pointer' onClick={handleClick}>
-                    {click ? <FaTimes /> : <FaAlignJustify />}
-                </div>
-
-                <ul className='flex list-none pt-5 w-[60.2%] -m-px'>
-                    {navItems.map((item, index) => (
-                        <li
-                            key={index}
-                            className={`nav-item ${item.to === '/' ? 'w-[13%]' : ''}`}
-                        >
-                            {item.type === 'button' ? (
-                                <button className="py-3.5 px-10 rounded-full bg-[#FF64AE] border-0 text-white text-base tracking-[1.6px] font-semibold font-poppins -mt-[15px] ml-[30px]" onClick={closeMobileMenu}>
-                                    {item.text}
-                                </button>
-                            ) : (
-                                <Link to={item.to} className="no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] p-[22.7px]" onClick={closeMobileMenu}>
-                                    {item.text}
-                                </Link>
-                            )}
+                <div
+                    className={`md:static absolute md:min-h-fit min-h-[350px] left-0 top-[20%] md:w-auto w-full flex items-center -mt-[13px] pr-5 pl-[158px] max-xxl:p-0 max-lg:-mt-[6px] max-md:justify-center max-md:items-center max-md:bg-black ${click ? 'block' : 'hidden'} md:block`}
+                >
+                    <ul onClick={() => setClick(false)} className='flex justify-between md:flex-row flex-col md:items-center md:gap-[45.2px] gap-8 max-xl:gap-[25px] max-lg:gap-[18px] max-md:flex-col max-md: min-w-[100px] max-md:justify-center max-md:items-center  '>
+                        <li className="max-md:border-b max-md:border-gray-300 max-md:pb-2">
+                            <a className='no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] whitespace-nowrap max-lg:text-sm' href="/home">Home +</a>
                         </li>
-                    ))}
-                </ul>
-            </div>
-        </nav>
+                        <li className="max-md:border-b max-md:border-gray-300 max-md:pb-2">
+                            <a className='no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] -ml-[6px] max-lg:text-sm' href="/about">About</a>
+                        </li>
+                        <li className="max-md:border-b max-md:border-gray-300 max-md:pb-2">
+                            <a className='no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] max-lg:text-sm' href="/service">Service</a>
+                        </li>
+                        <li className="max-md:border-b max-md:border-gray-300 max-md:pb-2">
+                            <a className='no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] max-lg:text-sm' href="/gallery">Gallery</a>
+                        </li>
+                        <li className="max-md:border-b max-md:border-gray-300 max-md:pb-2">
+                            <a className='no-underline text-base font-medium leading-[24px] tracking-[1.6px] text-[#8B8B8B] max-lg:text-sm' href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className='-mt-[13px] pr-[5px] max-lg:pl-[15px] max-lg:-mt-[6px] flex'>
+                    <button className='py-3.5 px-10 bg-[#FF64AE] rounded-full text-white text-base tracking-[1.6px] font-semibold max-lg:text-sm max-lg:py-2.5 max-lg:px-6 max-md:py-0.5 max-md:px-3'>Contact</button>
+                    <div className='text-base mt-[5px] md:hidden max-md:block ml-3 cursor-pointer ' onClick={handleClick}>
+                        {click ? <FaTimes /> : <FaAlignJustify />}
+                    </div>
+
+                </div>
+            </navbar>
+        </>
     );
 }
 
