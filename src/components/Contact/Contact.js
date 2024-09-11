@@ -4,7 +4,9 @@ import './Contact.css'
 function Contact() {
     return (
         <>
-            <div className="max-w-screen-2xl font-poppins flex justify-between pt-[144px] pl-[150px] pr-[150px] max-xl:flex-col max-xl:w-[80%] max-xl:p-0 max-xl:mx-auto max-xl:items-center">
+            <div className="max-w-screen-2xl font-poppins flex justify-between pt-[144px] pl-[150px] pr-[150px] max-xl:flex-col max-xl:w-[80%] max-xl:p-0 max-xl:mx-auto max-xl:items-center
+             2xl:w-[80%] 2xl:mx-auto
+            ">
                 <div className='pt-[252px] max-xl:pt-[20px]'>
                     <img src={contact_img} alt='abc'></img>
                 </div>

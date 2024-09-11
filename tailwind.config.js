@@ -1115,6 +1115,9 @@ module.exports = {
         'max-md': { 'max': '768px' },
         'max-ssm': { 'max': '425px' },
         'max-sssm': { 'max': '375px' },
+
+
+        
        
     },
 

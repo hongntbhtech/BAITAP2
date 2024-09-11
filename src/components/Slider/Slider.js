@@ -10,6 +10,7 @@ function Slider() {
             max-xl:w-[80%] max-xl:p-0 max-xl:mx-auto
             max-lg:flex-col max-lg:items-center
             max-ssm:w-[90%]
+            2xl:w-[80%] 2xl:mx-auto
             '>
                 <div className='pt-[60px] pb-[60px] pl-[43px] w-2/3 max-lg:text-center max-lg:pl-0'>
                     <h1 className="font-semibold text-[#091156] text-[48px] leading-[60px] max-md:text-[45px] max-ssm:text-[40px] max-sssm:text-[33px]">

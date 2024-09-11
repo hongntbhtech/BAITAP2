@@ -7,7 +7,9 @@ function Services() {
     return (
 
         <>
-            <div className='max-w-screen-2xl font-poppins max-md:w-[90%] max-md:mx-auto'>
+            <div className='max-w-screen-2xl font-poppins max-md:w-[90%] max-md:mx-auto
+                 2xl:w-[80%] 2xl:mx-auto
+            '>
                 <div className='text-center pt-[131px] max-w-850 m-0 m-auto'>
                     <h4 className='text-[16px] font-semibold leading-[20px] text-[#ff64ae] max-md:text-[14px] '>Main Services</h4>
                     <h1 className='text-[36px] font-semibold leading-[45px] text-[#091156] max-w-450 m-0 m-auto pt-[11px] max-md:text-[40px] max-sm:text-[37px] max-ssm:text-[33px]'>Learn services to focus on your beauty</h1>

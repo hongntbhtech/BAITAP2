@@ -7,6 +7,7 @@ function About() {
             <div className='max-w-screen-2xl font-poppins flex pt-[135px] pl-[150px] pr-[145px] 
             max-xxl:w-[80%] max-xxl:p-0 max-xxl:mx-auto
             max-xl:w-[80%] max-xl:flex-col max-xl:items-center
+             2xl:w-[80%] 2xl:mx-auto
             '>
                 <div className='w-[80%] max-xl:text-center'>
                     <h4 className='text-[16px] font-semibold leading-[20px] text-[#ff64ae] max-md:text-[14px] max-sm:text-[14px]'>About Us</h4>
